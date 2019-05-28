@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class CarpetCalculator {
 
-       public static void main(String[] args) {
-           Scanner sc=new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         System.out.println(" Enter Width and height");
         double width=sc.nextDouble();
         double length=sc.nextDouble();
@@ -23,27 +23,27 @@ class Floor
 {
     double width;
     double length;
-     Floor(double width,double lenght)
-     {
-         this.width=isValid(width);
-         this.length=isValid(lenght);
-         double area=width*lenght;
-     }
-     public double getArea(double width,double length)
-     {
-         double area=width*length;
-         return area;
-     }
+    Floor(double width,double lenght)
+    {
+        this.width=isValid(width);
+        this.length=isValid(lenght);
+        double area=width*lenght;
+    }
+    public double getArea(double width,double length)
+    {
+        double area=width*length;
+        return area;
+    }
 
-     public double isValid(double number)
-     {
-         if(number>0)
-         {
-             return number;
-         }
-         else
-             return 0;
-     }
+    public double isValid(double number)
+    {
+        if(number>0)
+        {
+            return number;
+        }
+        else
+            return 0;
+    }
 
 }
 
@@ -56,19 +56,19 @@ class Carpet
             this.cost = cost;
         }
         else
-        this.cost=0;
+            this.cost=0;
     }
     public double getCost()
     {
-         return cost;
+        return cost;
     }
 
 }
 
 class Calculator
-    {
-        Floor floor;
-        Carpet carpet;
+{
+    Floor floor;
+    Carpet carpet;
 
     Calculator(Floor floor, Carpet carpet)
     {
@@ -79,7 +79,7 @@ class Calculator
     public double getTotalCost()
     {
         double totalcost=(this.floor.length*this.floor.width)*this.carpet.cost;
-       return  totalcost;
+        return  totalcost;
 
     }
 }
